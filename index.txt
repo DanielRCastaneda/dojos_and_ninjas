@@ -1,0 +1,22 @@
+SELECT * FROM mydb.dojos;
+INSERT INTO dojos (name) VALUES ('bulls');
+INSERT INTO dojos (name) VALUES ('Bucks');
+INSERT INTO dojos (name) VALUES ('Suns');
+INSERT INTO dojos (name) VALUES ('Steelers');
+
+DELETE FROM dojos 
+WHERE dojos.id = 1;
+DELETE FROM dojos 
+WHERE dojos.id = 2;
+DELETE FROM dojos 
+WHERE dojos.id = 3;
+
+SELECT * FROM mydb.ninjas;
+INSERT INTO ninjas (first_name, last_name, age, dojos_id) VALUES ('Daniel', 'Castaneda', 19,4);
+INSERT INTO ninjas (first_name, last_name, age, dojos_id) VALUES ('ED', 'Castaneda', 19,5);
+INSERT INTO ninjas (first_name, last_name, age, dojos_id) VALUES ('EDDY', 'Castaneda', 19,6);
+
+
+SELECT * FROM dojos
+LEFT JOIN ninjas
+ON dojos.id = ninjas.dojos_id;
